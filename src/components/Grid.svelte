@@ -1,5 +1,5 @@
 <script>
-    import { Stage, Layer, Line, Rect } from 'svelte-konva';
+    import { Stage, Layer, Line } from 'svelte-konva';
 
     let width = window.innerWidth;
     let height = window.innerHeight;
