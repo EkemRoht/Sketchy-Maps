@@ -1,7 +1,8 @@
 {
-  "name": "vite-svelte-starter",
+  "name": "svelte-konva-basic-demo",
+  "description": "svelte-konva basic demo",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,11 +10,17 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.0.0",
-    "svelte": "^4.2.3",
-    "vite": "^5.0.0"
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "svelte": "^4.0.5",
+    "vite": "^4.4.5"
   },
   "dependencies": {
-    "@picocss/pico": "^1.5.10"
-  }
+    "konva": "^9.2.0",
+    "svelte-konva": "^0.3.1"
+  },
+  "keywords": [
+    "svelte",
+    "konva",
+    "svelte-konva"
+  ]
 }

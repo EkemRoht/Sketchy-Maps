@@ -1,8 +1,5 @@
 <script>
-    import '@picocss/pico';
-    import './app.css';
+import Grid from "./components/Grid.svelte";
 </script>
 
-<main class="container">
-
-</main>
+<Grid/>
