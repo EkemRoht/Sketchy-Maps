@@ -1,11 +1,9 @@
 <script>
-    import { Stage, Layer, Line } from 'svelte-konva';
+    import { Line } from 'svelte-konva';
 
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-    let gridSize = 50;
-    let cellCountWidth = 10; // Ограничение по количеству ячеек в ширину
-    let cellCountHeight = 10; // Ограничение по количеству ячеек в высоту
+    export let gridSize;
+    export let cellCountWidth;
+    export let cellCountHeight ;
     let lines = generateGrid();
 
     function generateGrid() {
@@ -47,35 +45,31 @@
     }
 </script>
 
-<Stage config={{ width, height, draggable: true }}>
-    <Layer>
-        <!-- Отрисовываем линии сетки -->
-        {#each lines as { points, stroke, strokeWidth, dash }, i}
-            <Line
-                    config={{
+<!-- Отрисовываем линии сетки -->
+{#each lines as { points, stroke, strokeWidth, dash }, i}
+    <Line
+            config={{
                     points: points,
                     stroke: '#aaa',
                     strokeWidth: strokeWidth,
                     dash: dash,
                 }}
-            />
-        {/each}
-        <!-- Отрисовываем крестики на пересечениях линий сетки -->
-        {#each generateCrosses() as { x, y }, i}
-            <Line
-                    config={{
+    />
+{/each}
+<!-- Отрисовываем крестики на пересечениях линий сетки -->
+{#each generateCrosses() as { x, y }, i}
+    <Line
+            config={{
                     points: [x - 3, y, x + 3, y],
                     stroke: '#666',
                     strokeWidth: 1,
                 }}
-            />
-            <Line
-                    config={{
+    />
+    <Line
+            config={{
                     points: [x, y - 3, x, y + 3],
                     stroke: '#666',
                     strokeWidth: 1,
                 }}
-            />
-        {/each}
-    </Layer>
-</Stage>
+    />
+{/each}
