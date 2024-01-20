@@ -12,7 +12,7 @@
 
 <Stage config={{ width, height, draggable: true }}>
     <Layer>
-<!--        <BlueprintLayer {cellCountWidth} {cellCountHeight} {gridSize} />-->
+        <BlueprintLayer {cellCountWidth} {cellCountHeight} {gridSize} />
         <Grid {cellCountWidth} {cellCountHeight} {gridSize} />
     </Layer>
 </Stage>
